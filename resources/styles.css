@@ -1,0 +1,399 @@
+                                    /* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #e7b03aa9;  /* nacho-orange-yellow */
+}
+
+                                /* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C23B22;  /* chili-red */
+    padding: 10px 30px;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+#navbar li {
+    margin: 0 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #f8f9fa;  /* White-ish color for contrast with chili-red */
+    transition: color 0.2s;
+}
+
+#navbar a:hover {
+    color: #FFD64D;  /* sun-yellow for hover effect */
+}
+
+#hamburger {
+    display: none;  /* Initially hidden */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #f8f9fa;  /* White-ish color for visibility on chili-red */
+}
+
+#nav-menu {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+/* Hero Section */
+#hero {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;  /* Prevents any overflowing elements */
+    background-color: #5C873E;  /* nacho-orange-yellow */
+}
+
+#hero::before {
+    content: "";  /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;  /* This ensures the overlay is above the image but below the content */
+}
+
+#hero img {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;  /* Ensures the image doesn't overflow its container */
+    height: auto;
+    z-index: -1;  /* Places the image behind the content and the overlay */
+}
+
+#hero div {
+    position: relative; 
+    z-index: 1; 
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#hero h1, #hero h2 {
+    color: #5C873E;  /* pepper-green */
+    -webkit-text-stroke: 1px white;
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+}
+
+
+
+/* Button Enhancement */
+button, .button {
+    display: inline-block;  /* This makes sure the anchor behaves like a button */
+    padding: 10px 20px;
+    border: none;
+    background-color: #2B8EAD;  /* pottery-blue */
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;  /* Removes underline from the anchor */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, .button:hover {
+    background-color: #0056b3;
+}
+
+button:active, .button:active {
+    transform: scale(0.95);  /* This gives a slight shrink effect when active */
+}
+
+/* Background Light */
+.bg-light {
+    background-color: #784212;  /* chocolate-brown */
+    padding: 20px 0;
+}
+                    /* Menu Section */
+.menu-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.menu-section h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;  /* This will capitalize all letters */
+    color: #333;
+}
+
+.menu-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.column {
+    width: calc(33.33% - 10px);
+    float: left;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.column:last-child {
+    padding-right: 0;
+}
+
+/* Clearfix for columns */
+.menu-section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add some spacing at the bottom of each section */
+.menu-section {
+    margin-bottom: 20px;
+}
+
+.menu-disclaimer {
+    background-color: #f9f9f9;  /* A subtle light gray background */
+    border: 1px solid #e0e0e0;  /* Lighter border for subtlety */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 8px 15px;  /* Slightly reduced padding */
+    margin: 20px auto;  /* Vertical spacing and horizontal auto for centering */
+    font-size: 0.7em;  /* Even smaller font size */
+    text-align: center;  /* Center the text */
+    width: 50rem;
+}
+
+
+.menu-disclaimer p {
+    margin: 8px 0;  /* Reduced vertical spacing between paragraphs */
+}
+
+.menu-disclaimer strong {
+    color: #555;  /* A softer color for emphasis */
+}
+
+
+                /*  LOCATION */
+#location iframe {
+    width: 100%;  /* This makes the map responsive. */
+    max-width: 800px;  /* Adjust if needed. */
+    height: 450px;  /* Adjust based on your preference. */
+    display: block;
+    margin: 20px auto;
+    border: none;  /* Removes any border. */
+}
+
+#location {
+    background-color: #FF6B35;  /* sunset-orange */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Vertically centers the content */
+    text-align: center;  /* Horizontally centers the text */
+}
+
+
+
+   /* Testimonials Container */
+#testimonials {
+    background-color: #FFB61E;  /* nacho-orange-yellow */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 1rem;
+}
+
+/* Individual Testimonial Styling */
+.testimonial {
+    background-color: #FFEBAA;  /* A light background for the testimonials for better readability */
+    flex: 1;
+    max-width: calc(33.33% - 40px);
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #FFEBAA;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px;
+}
+
+.testimonial-text {
+    flex: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start the content from the top */
+    padding: 20px; /* Add some padding to the top, bottom, left, and right */
+    text-align: center; /* Center-align the text horizontally */
+}
+
+.testimonial h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    margin: 0;
+    font-style: italic;
+}
+
+
+
+
+                                    /* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #5C873E;  /* pepper-green */
+    color: #f8f9fa;
+}
+
+
+
+.color-scheme {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;  /* Optional: Adds a border for visual separation */
+}
+
+
+
+
+    /*          Color SCHEME
+.chili-red { background-color: #C23B22; }
+.pepper-green { background-color: #5C873E; }
+.pottery-blue { background-color: #2B8EAD; }
+.sun-yellow { background-color: #FFD64D; }
+.sun-yellow2 { background-color: #FFEBAA; }
+.sunset-orange { background-color: #FF6B35; }   
+.chocolate-brown { background-color: #784212; }
+.nacho-orange-yellow { background-color: #FFB61E; }
+
+*/
+
+
+/* Mobile Responsive Adjustments */
+
+
+@media only screen and (max-width: 768px) {
+    /* Navbar */
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar li {
+        margin: 5px 0;
+    }
+
+    /* Menu Section */
+    .menu-section {
+        padding: 10px;
+    }
+
+    .column {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    /* Hero Section */
+    #hero {
+        height: 80vh; /* Adjust this value if you want to show more or less of the image on mobile */
+    }
+
+    #hero img {
+        height: 50vh; /* Allowing image to take the full height of the hero section */
+    }
+
+    #hero div {
+        top: 50%; /* Keeps the text and buttons vertically centered */
+        transform: translate(-50%, -50%);
+    }
+
+    /* Testimonials */
+    #testimonials {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        max-width: 90%;  /* Allow testimonials to take up more width on mobile */
+        margin: 10px auto;  /* Centering testimonials */
+    }
+
+    /* Menu Disclaimer */
+    .menu-disclaimer {
+        width: 90%;  /* Making it more narrow for mobile */
+    }
+
+    /* General Adjustments */
+    p, h2, h3, h4, button {
+        font-size: 0.9em;  /* Slightly reduce font size for mobile */
+    }
+    .testimonial {
+        flex-direction: column; /* Stacks the image and text vertically */
+        max-width: 90%; /* Increases width for better spacing */
+        margin: 10px auto; /* Centers the testimonial */
+        gap: 10px; /* Reduces gap between image and text */
+    }
+
+    .testimonial-text {
+        padding: 10px; /* Reduces padding for mobile */
+    }
+
+    .testimonial h3, .testimonial p {
+        font-size: 0.9em; /* Reduces font size for mobile */
+    }
+    #hamburger {
+        display: block;  /* Display hamburger icon */
+    }
+
+    #nav-menu {
+        display: none;  /* Initially hide the menu */
+        flex-direction: column;  /* Stack items vertically */
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #C23B22; /* chili-red */
+    }
+
+    #nav-menu.active {  /* Show menu when it has the 'active' class */
+        display: flex;
+    }
+
+    #navbar a, #navbar li {
+        display: block;
+        text-align: center;
+    }
+}
